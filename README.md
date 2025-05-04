@@ -1,23 +1,24 @@
 # 📝 To-Do List Console App (C#)
-Проста и лесна за използване конзолна апликация, разработена на C#, която помага за организиране на ежедневните задачи. Чрез текстово меню потребителят може да добавя, преглежда и изтрива задачи.
-## 🔧 Функционалности
+A simple and easy-to-use console application, developed in C#, that helps organize daily tasks. Through a text menu, the user can add, view, and delete tasks.
+## 🔧 Functionalities
 
-- ➕ Добавяне на нова задача  
-- 📋 Преглед на всички задачи  
-- ❌ Изтриване на задача
-  ## 🛠️ Използвани технологии
+- ➕ Add a new task
+- 📋 View all tasks
+- ✅ Mark a task as completed 
+- ❌ Delete a task
+  ## 🛠️ Technologies used
 
-- Език: **C#**
-- Тип приложение: **Console Application**
-- Платформа:**.NET 8**
-## ▶️ Как да стартирате проекта
+- Language: **C#**
+- Application type: **Console Application**
+- Platform:**.NET 8**
+## ▶️ How to start the project
 
-1. Клонирай хранилището:
+1. Clone the repository:
    ```bash
    git clone https://github.com/NedelinGrudev36/To-Do-List.git
-2. Отвори проекта в Visual Studio
-3. Стартирай програмата с Ctrl + F5
-## 👨‍💻 Автор
+2. Open the project in Visual Studio
+3. Start the program with Ctrl + F5
+## 👨‍💻 Author
 
-- **Име:** Nedelin Grudev
+- **Name:** Nedelin Grudev
 - **GitHub:** [@NedelinGrudev36](https://github.com/NedelinGrudev36)
