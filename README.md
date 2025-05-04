@@ -17,3 +17,7 @@
    git clone https://github.com/NedelinGrudev36/To-Do-List.git
 2. Отвори проекта в Visual Studio
 3. Стартирай програмата с Ctrl + F5
+## 👨‍💻 Автор
+
+- **Име:** Nedelin Grudev
+- **GitHub:** [@NedelinGrudev36](https://github.com/NedelinGrudev36)
