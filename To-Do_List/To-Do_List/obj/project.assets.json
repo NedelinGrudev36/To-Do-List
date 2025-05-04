@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Programming\\proba\\To-Do_List\\To-Do_List\\To-Do_List.csproj",
+      "projectUniqueName": "C:\\To-Do-List\\To-Do_List\\To-Do_List\\To-Do_List.csproj",
       "projectName": "To-Do_List",
-      "projectPath": "C:\\Programming\\proba\\To-Do_List\\To-Do_List\\To-Do_List.csproj",
+      "projectPath": "C:\\To-Do-List\\To-Do_List\\To-Do_List\\To-Do_List.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "C:\\Programming\\proba\\To-Do_List\\To-Do_List\\obj\\",
+      "outputPath": "C:\\To-Do-List\\To-Do_List\\To-Do_List\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",

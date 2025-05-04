@@ -8,6 +8,7 @@ namespace To_Do_List
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Enter items in To-Do List");
             List<string> todolist = Console.ReadLine()
                 .Split(", ", StringSplitOptions.RemoveEmptyEntries)
                 .ToList();
@@ -21,28 +22,24 @@ namespace To_Do_List
                 if (command == "1")
                 {
                     Console.Write("Enter item to add: ");
-                    string input = Console.ReadLine();
+                    string input = Console.ReadLine().ToLower();
                     todolist.Add(input);
-                    ReloadMenu(todolist);
+                    ListItem(todolist);
                 }
                 else if (command == "2")
                 {
                     Console.Write("Enter item to remove: ");
-                    string input = Console.ReadLine();
-                    try
-                    {
-                        Contains(todolist, input);
-                        todolist.Remove(input);
-                        ReloadMenu(todolist);
-                    }
-                    catch (ArgumentException ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
+                    string input = Console.ReadLine().ToLower();
+                    
+                    Contains(todolist, input);
+                    todolist.Remove(input);
+                    ListItem(todolist);
                 }
-                else if (command != "end")
+                else if (command == "3")
                 {
-                    Console.WriteLine("Invalid option. Try again.");
+                    Console.Write("Select item as completed: ");
+                    string input = Console.ReadLine().ToLower();
+                    SetColorProperty(todolist, input);
                 }
 
             } while (command != "end");
@@ -50,11 +47,30 @@ namespace To_Do_List
             Console.WriteLine("Program ended.");
         }
 
+        private static void SetColorProperty(List<string> todolist, string input)
+        {
+            Console.WriteLine("\nUPDATE LIST");
+            foreach (var item in todolist)
+            {
+                if (item == input)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"-- {item}");
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine($"-- {item}");
+                }
+                Console.ResetColor();
+            }
+        }
+
         private static void Contains(List<string> todolist, string item)
         {
             if (!todolist.Contains(item))
             {
-                throw new ArgumentException("This name is not valid in list!!!");
+                Console.WriteLine("This name is not valid in list!!!"); 
             }
         }
 
@@ -63,11 +79,12 @@ namespace To_Do_List
             Console.WriteLine("\nMenu:");
             Console.WriteLine("1. Add");
             Console.WriteLine("2. Remove");
+            Console.WriteLine("3. Completed");
             Console.WriteLine("Type 'end' to exit.");
             Console.Write("Select option: ");
         }
 
-        private static void ReloadMenu(List<string> todolist)
+        private static void ListItem(List<string> todolist)
         {
             Console.WriteLine("\nUPDATE LIST");
             foreach (string item in todolist)
