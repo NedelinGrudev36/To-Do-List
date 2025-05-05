@@ -49,7 +49,7 @@ namespace To_Do_List
 
         private static void SetColorProperty(List<string> todolist, string input)
         {
-            Console.WriteLine("\nUPDATE LIST");
+            Console.WriteLine(Environment.NewLine + "UPDATE LIST");
             foreach (var item in todolist)
             {
                 if (item == input)
@@ -76,7 +76,7 @@ namespace To_Do_List
 
         private static void Menu()
         {
-            Console.WriteLine("\nMenu:");
+            Console.WriteLine(Environment.NewLine + "Menu:");
             Console.WriteLine("1. Add");
             Console.WriteLine("2. Remove");
             Console.WriteLine("3. Completed");
@@ -86,7 +86,7 @@ namespace To_Do_List
 
         private static void ListItem(List<string> todolist)
         {
-            Console.WriteLine("\nUPDATE LIST");
+            Console.WriteLine(Environment.NewLine + "UPDATE LIST");
             foreach (string item in todolist)
             {
                 Console.WriteLine($"-- {item}");
