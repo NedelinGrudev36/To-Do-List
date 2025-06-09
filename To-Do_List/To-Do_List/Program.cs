@@ -10,38 +10,38 @@ namespace To_Do_List
         {
             Console.WriteLine("Enter items in To-Do List");
             List<string> todolist = Console.ReadLine()
+                .Trim()
+                .ToLower()
                 .Split(", ", StringSplitOptions.RemoveEmptyEntries)
                 .ToList();
 
-            string command;
+            string command, input;
             do
             {
                 Menu();
                 command = Console.ReadLine();
+                switch (command)
+                {
+                    case "1":
+                        Console.Write("Enter item to add: ");
+                        input = Console.ReadLine().ToLower();
+                        todolist.Add(input);
+                        ListItem(todolist);
+                        break;
+                    case "2":
+                        Console.Write("Enter item to remove: ");
+                        input = Console.ReadLine().ToLower();
 
-                if (command == "1")
-                {
-                    Console.Write("Enter item to add: ");
-                    string input = Console.ReadLine().ToLower();
-                    todolist.Add(input);
-                    ListItem(todolist);
+                        Contains(todolist, input);
+                        todolist.Remove(input);
+                        ListItem(todolist);
+                        break;
+                    case "3":
+                        Console.Write("Select item as completed: ");
+                        input = Console.ReadLine().ToLower();
+                        SetColorProperty(todolist, input);
+                        break;   
                 }
-                else if (command == "2")
-                {
-                    Console.Write("Enter item to remove: ");
-                    string input = Console.ReadLine().ToLower();
-                    
-                    Contains(todolist, input);
-                    todolist.Remove(input);
-                    ListItem(todolist);
-                }
-                else if (command == "3")
-                {
-                    Console.Write("Select item as completed: ");
-                    string input = Console.ReadLine().ToLower();
-                    SetColorProperty(todolist, input);
-                }
-
             } while (command != "end");
 
             Console.WriteLine("Program ended.");
